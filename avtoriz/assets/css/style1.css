@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Franklin Gothic Book" , sans-serif ;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 20px;
+    background: linear-gradient( 280deg, white, rgb(131, 247, 255));
+}
+
+input{
+    padding: 10px;
+    border: unset;
+    background-color: #ffffff;
+    outline: none;
+    border-radius: 20px;
+}
+
+button{
+    margin: 10px 0;
+    padding: 10px;
+    border: unset;
+    background-color: #ffffff;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+a{
+    color: #0084ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+p{
+    margin: 10px 0 20px;
+}
+
+.msg{
+   border: 2px solid black;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+}
+
+
