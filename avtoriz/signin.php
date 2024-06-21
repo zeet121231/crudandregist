@@ -19,5 +19,5 @@ if ( $check_users->num_rows== 1) {
     header('Location: ../index.php');
 } else {
     $_SESSION['massage'] = 'Неверный Логин или Пароль!!!';
-    header('Location: ../дистант.php');
+    header('Location: ../avtoriz/дистант.php');
 }
