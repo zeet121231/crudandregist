@@ -10,7 +10,7 @@ $password = $_POST['password'];
 $password_confirm = $_POST['password_confirm'];
 
 if ($password === $password_confirm) {
-    
+
     if(isset($_FILES['avatar'])){
         $path = 'uploads/' .time() .$_FILES['avatar']['name'];
         if ( !move_uploaded_file($_FILES['avatar']['tmp_name'], '../' .$path) ) {
@@ -23,7 +23,7 @@ if ($password === $password_confirm) {
 
 
     $password = md5($password);
-    $sql = "INSERT INTO `Blog21` (`id`,`full_name`,`login`,`email`,`password`,`avatar`) VALUES (NULL, '$full_name', '$login', '$email', '$password', '$path')";
+    $sql = "INSERT INTO `Blog21`(`id`, `full_name`, `login`, `email`, `password`, `avatar`) VALUES (NULL, '$full_name', '$login', '$email', '$password', '$path')";
     mysqli_query($connect, $sql);
     $_SESSION['massage'] = 'регистрация прошла успешно';
     header('Location: ../дистант.php');

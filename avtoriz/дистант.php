@@ -2,8 +2,7 @@
 session_start();
 // if (isset($_SESSION['user'])) {
 //     header('Location: ../profile.php');
-// } 
-//не понятно почему перестала работать авторизация и регистрация(((
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +15,7 @@ session_start();
 </head>
 
 <body>
-    <form action="vendor/signin.php" method="post">
+    <form action="signin.php" method="post">
         <p>Тут будет форма авторизации:</p>
         <label>Логин</label>
         <input type="text" name="login" placeholder="Введите логин">
@@ -26,16 +25,16 @@ session_start();
         <p>
             У вас нет аккаунта? - <a href="register.php">зарегистрируйтесь</a>
         </p>
-
+        
             <?php
             if ( isset($_SESSION['massage'])){
                 echo '<p class = "massage"> ' . $_SESSION['massage'] . '</p>';
-
+                
             }unset($_SESSION['massage']);
             ?>
-<a href="/ttt/index.php">Посты</a>
+        
     </form>
-    
+
 </body>
 
 </html>

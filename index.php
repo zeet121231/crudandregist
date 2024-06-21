@@ -11,7 +11,7 @@
 <?php
     //Подключится к БД
     require 'connect.php';
-
+session_start();
     //Сделать запрос select
     $sql = "SELECT * FROM posts";
     $statement = $pdo -> prepare($sql);
@@ -53,7 +53,7 @@
                         <div class="panel-toolbar">
                             <!-- <button class="btn btn-panel waves-effect waves-themed" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
                             <button class="btn btn-panel waves-effect waves-themed" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button> -->
-                            <a href="\avtoriz\дистант.php" class="btn btn-success">Войти в аккаунт</a>
+                            
                         </div>
                     </div>
                     <div class="panel-container show">
@@ -78,7 +78,12 @@
                             <?php endforeach; ?>
 
                         </div>
-                            <a href="create.php" class="btn btn-success">Добавить статью</a>
+                        <?php if (isset($_SESSION['user'])): ?>
+                        <a href="create.php" class="btn btn-success">Добавить статью</a>
+                        <a href="logout.php" class="btn btn-danger">Выход</a>
+                    <?php else: ?>
+                        <a href="\avtoriz\дистант.php" class="btn btn-success">Войти в аккаунт</a>
+                    <?php endif; ?>
                         </div>
                     </form>
                     </div>
