@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июн 20 2024 г., 22:26
+-- Время создания: Июн 21 2024 г., 07:45
 -- Версия сервера: 5.7.39
 -- Версия PHP: 8.0.22
 
@@ -41,8 +41,7 @@ CREATE TABLE `Blog21` (
 --
 
 INSERT INTO `Blog21` (`id`, `full_name`, `login`, `email`, `password`, `avatar`) VALUES
-(31, 'Григорий Камаев', 'gg', '', '202cb962ac59075b964b07152d234b70', 'uploads/1715966399Screenshot_2023-09-23-17-59-24-462-edit_com.spotify.music.jpg'),
-(32, 'Ирина Мамбетова Пудж', 'gg', 'makven2005@mail.ru', '73c18c59a39b18382081ec00bb456d43', 'uploads/17184358063  пироженные.webp');
+(1, 'Grigory', 'gg', 'grishakamaev93@gmail.com', '73c18c59a39b18382081ec00bb456d43', 'uploads/171894433825aa8ef346f3b1b9c7d3e56bcebcb899.jpg');
 
 -- --------------------------------------------------------
 
@@ -61,12 +60,17 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `title`, `content`) VALUES
-(2, 'привет [eq', 'asdasdasd'),
-(3, 'привет как ', 'дела');
+(4, 'sdfsdf', 'sdfsdfdsf');
 
 --
 -- Индексы сохранённых таблиц
 --
+
+--
+-- Индексы таблицы `Blog21`
+--
+ALTER TABLE `Blog21`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Индексы таблицы `posts`
@@ -79,10 +83,16 @@ ALTER TABLE `posts`
 --
 
 --
+-- AUTO_INCREMENT для таблицы `Blog21`
+--
+ALTER TABLE `Blog21`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT для таблицы `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
