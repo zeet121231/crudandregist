@@ -80,6 +80,7 @@ session_start();
                         </div>
                         <?php if (isset($_SESSION['user'])): ?>
                         <a href="create.php" class="btn btn-success">Добавить статью</a>
+                        <a href="avtoriz\profile.php" class="btn btn-success">Личный кабинет</a>
                         <a href="logout.php" class="btn btn-danger">Выход</a>
                     <?php else: ?>
                         <a href="\avtoriz\дистант.php" class="btn btn-success">Войти в аккаунт</a>
